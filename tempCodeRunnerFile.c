@@ -1,20 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(int argc, char *argv[])
 {
-    int i = 0;
-    char str[4];
-    str[0] = 'a';
-    str[1] = 'b';
-    str[2] = 'c'; 
-    str[3] = '\0'; 
+    char src[30] = "happy C programming";
+    
 
-    printf("%s\n", str);
-    while (str[i]!= '\0'){
-        printf("%c",str[i]);
-        i++;
-    }
+    printf("its\"%s\" length  : %lu", src, strlen(src));
     system("PAUSE");
     return 0;
 }
