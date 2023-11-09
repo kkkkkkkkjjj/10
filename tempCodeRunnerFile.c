@@ -5,14 +5,20 @@
 int main(int argc, char *argv[])
 {
     FILE* fp;
-    char str[100];
-    fp = fopen("sample.txt", "w");
+    char c;
+    int i;
 
-    for (i = 0;i<3;i++)
+    fp = fopen("sample.txt", "r");
+
+    if (fp == NULL)
     {
-       printf("input a word :\n");
-       scanf("%s",str);
-       fprintf(fp,"%s",str);  
+        printf("faliled to open\n");
+        return 0;
+    }
+
+    while ((c = fgetc(fp)) != EOF)
+    {
+        putchar(c);
     }
    
     fclose(fp);
@@ -20,4 +26,5 @@ int main(int argc, char *argv[])
     system("PAUSE");
     return 0;
 }
+
 
