@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     char str[100];
     fp = fopen("sample.txt", "w");
 
-    for (int i = 0;i<3;i++)
+    for (i = 0;i<3;i++)
     {
        printf("input a word :\n");
        scanf("%s",str);
@@ -20,3 +20,4 @@ int main(int argc, char *argv[])
     system("PAUSE");
     return 0;
 }
+
